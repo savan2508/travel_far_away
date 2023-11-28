@@ -72,9 +72,10 @@ input {
 
 .list {
     display: flex;
+    overflow-y: hidden;
     align-items: center;
-    flex-direction: column;
 
+    flex-direction: column;
     justify-content: space-between;
     padding: 4rem 0;
     color: #ffebb3;
@@ -93,7 +94,7 @@ input {
 
 .list ul {
     display: grid;
-    overflow-y: auto;
+    /*overflow-y: auto;*/
     align-content: start;
 
     justify-content: center;
