@@ -1,10 +1,10 @@
 import { Item } from "./Item";
 
-export function PackingList({ initialItems }) {
+export function PackingList({ initialItems, items }) {
   return (
     <div className="list">
       <ul>
-        {initialItems.map((item) => (
+        {items.map((item) => (
           <Item key={item.id} item={item} />
         ))}
       </ul>

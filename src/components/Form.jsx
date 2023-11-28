@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function Form() {
+export function Form({ onAddItems }) {
   const [description, setDescription] = useState("");
   const [quantity, setQuantity] = useState(1);
 
@@ -11,6 +11,8 @@ export function Form() {
 
     const newItem = { description, quantity, packed: false, id: Date.now() };
     console.log(newItem);
+
+    onAddItems(newItem);
 
     setDescription("");
     setQuantity(1);
@@ -35,7 +37,7 @@ export function Form() {
         value={description}
         onChange={(e) => setDescription(e.target.value)}
       />
-      <button>Add</button>
+      <button onSubmit={handleSubmit}>Add</button>
     </form>
   );
 }

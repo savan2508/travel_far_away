@@ -93,7 +93,7 @@ input {
 
 .list ul {
     display: grid;
-    overflow: auto;
+    overflow-y: auto;
     align-content: start;
 
     justify-content: center;
